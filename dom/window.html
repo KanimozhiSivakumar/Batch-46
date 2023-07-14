@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo {
+            background-color: aqua;
+        }
+        .demo1 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+    <div class="demo1">
+        <p id =paragraph1 class="test1">Create a paragrah element with some text:</p>
+        <p id =paragraph1 class="test2">Create a paragrah element with some text:</p>
+        <p id =paragraph2 class="test3">Create a paragrah element with some text:</p>
+        <p id =paragraph3 class="test4">Create a paragrah element with some text:</p>
+        <p id =paragraph4 class="test5">Create a paragrah element with some text:</p>
+        <p id =paragraph5 class="test6">Create a paragrah element with some text:</p>
+        <p id =paragraph6 class="test7">Create a paragrah element with some text:</p>
+        <p id =paragraph7 class="test8">Create a paragrah element with some text:</p>
+
+       <script>
+        // document.querySelector('p').style.backgroundColor = "green";
+        // document.querySelectorAll('p').style.backgroundColor = "green";
+        const para = document.querySelectorAll('p');
+        
+        document.getElementById("demo").innerHTML = "browser inner window width: " + window.innerWidth + "px<br>" + 
+        "browser window height: " + window.innerHeight + "px<br>"; 
+
+
+       </script>
+</div>
+</body>
+</html>

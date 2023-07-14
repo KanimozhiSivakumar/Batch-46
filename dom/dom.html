@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom concepts</title>
+</head>
+<body>
+    <h1>creating dom elements</h1>
+    <script>
+        
+        const para =document.createElement("p");
+        para.innerText = "creating paragraph elements";
+        para.innerHTML = "<p>hey kani this is awesome!!!</p>";
+        document.body.appendChild(para);
+        document.body.append(para);
+        para.setAttribute ("id", "para1");
+        
+        const para1 = document.getElementById("para1");
+        para1.style.color ="green";
+        
+
+
+
+        const heading2 = document.createElement("h2");
+        heading2.innerText = "creating heading2 elements";
+        document.body.append(heading2);
+        // document.body.appendChild(heading2);
+        heading2.setAttribute ("id", "heading21");
+
+        const heading21 = document.getElementById("heading21");
+        heading21.style.color = "red";
+        heading21.style.border ="5px solid blue";
+        
+        const article1 = document.createElement("h1");
+        article1.innerText ="this is my second paragraph";
+        document.body.appendChild(article1);
+        article1.setAttribute("id", "paragraph2");
+
+
+        const paragraph2 = document.getElementById("paragraph2");
+        paragraph2.style.color = "pink";
+        paragraph2.style.border = "5px solid grey";
+
+        
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>

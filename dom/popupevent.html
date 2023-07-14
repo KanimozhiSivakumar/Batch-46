@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup concepts</title>
+</head>
+<body>
+    <h1>alert confirm prompt</h1>
+    <h1>javascript alert</h1>
+    <button onclick="myFunction()">click me</button>
+    <h1>javascript confirm</h1>
+    <button onclick="myFunction1()">click me</button>
+    <h1>javascript prompt</h1>
+
+    <button onclick="myFunction2()">click me</button>
+
+
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            alert("hi this is alert message!!!")
+        }
+       
+
+        function myFunction1() {
+            var text;
+            if(confirm("are you okay today??"))
+            {
+                text = "you pressed ok!!!";
+
+            }
+            else 
+            {
+                text = "you pressed cancel!!!";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+        function myFunction2() {
+            var txt;
+            let name= prompt("please enter your name");
+            if(name==null || name==""){
+                txt = "user cancelled the prompt.!!!";
+               
+            }
+            else {
+                txt = "Hello " + name + "! how are you??";
+            }
+
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

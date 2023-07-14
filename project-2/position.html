@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position properties</title>
+    <style>
+        .main {
+            background-color: aqua;
+            padding: 10px;
+            position: sticky;
+            /* left: 10px; */
+
+        }
+        .siblings {
+            background-color: bisque;
+            padding: 10px;
+            border: 10px solid black;
+        }
+        .parent {
+            position: fixed;
+            height: 100px;
+            background-color: blueviolet;
+            padding: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>position properties</h1>
+    <div class="parent">
+        <div class="siblings">siblings</div>
+        <div class="main">main</div>
+        <div class="siblings">siblings</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid chess task</title>
+    <style>
+        .chess {
+            display: grid;
+            grid-template-columns: repeat(8);
+            gap:1px;
+            grid-auto-rows: minmax(100px,auto);
+        }
+        .one {
+            background-color: rgb(230, 225, 225);
+            border: 2px solid black;
+            grid-column: 1;
+            grid-row: 1;
+            
+        }
+        .two {
+            background-color: rgb(13, 13, 13);
+            border: 1px solid black;
+            grid-column:2/8;
+            grid-row: 1;
+        }
+        .three {
+            background-color: rgb(230, 225, 225);
+            border: 1px solid black;
+            grid-column:3;
+            grid-row: 1;
+        }
+        .four {
+            background-color: rgb(13, 13, 13);
+            border: 1px solid black;
+            grid-column:4 ;
+            grid-row: 1;
+        }
+        .five {
+            background-color: rgb(230, 225, 225);
+            border: 1px solid black;
+            grid-column:5;
+            grid-row: 1;
+        }
+        .six {
+            background-color: rgb(13, 13, 13);
+            border: 1px solid black;
+            grid-column:6 ;
+            grid-row: 1;
+        }
+        .seven {
+            background-color: rgb(230, 225, 225);
+            border: 1px solid black;
+            grid-column:7;
+            grid-row: 1;
+        }
+        .eight {
+            background-color: rgb(13, 13, 13);
+            border: 1px solid black;
+            grid-column:8 ;
+            grid-row: 1;
+        }
+        .second-one {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column: 1;
+            grid-row: 2;
+            
+        }
+        .second-two {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 2;
+            grid-row: 2;
+            
+        }
+        .second-three {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column:3;
+            grid-row:2;
+            
+        }
+        .second-four {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 4;
+            grid-row: 2;
+            
+        }
+        .second-five {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column:5;
+            grid-row:2;
+        }
+        .second-six {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 6;
+            grid-row: 2;
+            
+        }
+        .second-seven {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column:7;
+            grid-row:2;
+        }
+        .second-eight {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 8;
+            grid-row: 2;
+            
+        }
+        .third-one {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .third-two {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column:2;
+            grid-row:3;
+        }
+        .third-three {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 3;
+            grid-row: 3;
+        }
+        .third-four {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column:4;
+            grid-row:3;
+        }
+        .third-five {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 5;
+            grid-row: 3;
+        }
+        .third-six {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column:6;
+            grid-row:3
+        }
+        .third-seven {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 7;
+            grid-row: 3;
+        }
+        .third-eight {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column:8;
+            grid-row:3
+        }
+        .fourth-one {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid-column:1;
+            grid-row:4
+        }
+        .fourth-two {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 2;
+            grid-row: 4;
+        }
+        .fourth-three {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 3;
+            grid-row: 4;
+        }
+        .fourth-four {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 4;
+            grid-row: 4;
+        }
+        .fourth-five {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column : 5;
+            grid-row : 4;
+        }
+        .fourth-six {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 6;
+            grid-row: 4;
+        }
+        .fourth-seven {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 7;
+            grid-row:4
+        }
+        .fourth-eight {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 8;
+            grid-row: 4;
+        }
+        .fifth-one {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 1;
+            grid-row: 5;
+        }
+        .fifth-two {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 2;
+            grid-row:5;
+        }
+        .fifth-three {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 3;
+            grid-row: 5;
+        }
+        .fifth-four {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 4;
+            grid-row:5;
+        }
+        .fifth-five {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 5;
+            grid-row: 5;
+        }
+        .fifth-six {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 6;
+            grid-row:5;
+        }
+        .fifth-seven {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 7;
+            grid-row: 5;
+        }
+        .fifth-eight {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 8;
+            grid-row:5;
+        }
+        .sixth-one {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 1;
+            grid-row:6;
+        }
+        .sixth-two {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 2;
+            grid-row: 6;
+        }
+        .sixth-three {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 3;
+            grid-row:6;
+        }
+        .sixth-four {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 4;
+            grid-row: 6;
+        }
+        .sixth-five {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 5;
+            grid-row:6;
+        }
+        .sixth-six {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 6;
+            grid-row: 6;
+        }
+        .sixth-seven {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 7;
+            grid-row:6;
+        }
+        .sixth-eight {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 8;
+            grid-row: 6;
+        }
+        .seventh-one {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 1;
+            grid-row: 7;
+        }
+        .seventh-two {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 2;
+            grid-row:7;
+        }
+        .seventh-three {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 3;
+            grid-row: 7;
+        }
+        .seventh-four {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 4;
+            grid-row:7;
+        }
+        .seventh-five {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 5;
+            grid-row: 7;
+        }
+        .seventh-six {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 6;
+            grid-row:7;
+        }
+        .seventh-seven {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 7;
+            grid-row: 7;
+        }
+        .seventh-eight {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 8;
+            grid-row:7;
+        }
+        .eighth-one {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 1;
+            grid-row:8;
+        }
+        .eighth-two {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 2;
+            grid-row: 8;
+        }
+        .eighth-three {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 3;
+            grid-row:8;
+        }
+        .eighth-four {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 4;
+            grid-row: 8;
+        }
+        .eighth-five {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 5;
+            grid-row: 8;
+        }
+        .eighth-six {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 6;
+            grid-row: 8;
+        }
+        .eighth-seven {
+            background-color: rgb(7, 7, 7);
+            border: 2px solid black;
+            grid: column: 7;
+            grid-row: 8;
+        }
+        .eighth-eight {
+            background-color: rgb(231, 225, 225);
+            border: 2px solid black;
+            grid-column: 8;
+            grid-row: 8;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>chess board task</h1>
+    <div class="chess">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven">7</div>
+        <div class="eight">8</div>
+        <div class="second-one">1</div>
+        <div class="second-two">2</div>
+        <div class="second-three">3</div>
+        <div class="second-four">4</div>
+        <div class="second-five">5</div>
+        <div class="second-six">6</div>
+        <div class="second-seven">7</div>
+        <div class="second-eight">8</div>
+        <div class="third-one">1</div>
+        <div class="third-two">2</div>
+        <div class="third-three">3</div>
+        <div class="third-four">4</div>
+        <div class="third-five">5</div>
+        <div class="third-six">6</div>
+        <div class="third-seven">7</div>
+        <div class="third-eight">8</div>
+        <div class="fourth-one">1</div>
+        <div class="fourth-two">2</div>
+        <div class="fourth-three">3</div>
+        <div class="fourth-four">4</div>
+        <div class="fourth-five">5</div>
+        <div class="fourth-six">6</div>
+        <div class="fourth-seven">7</div>
+        <div class="fourth-eight">8</div>
+        <div class="fifth-one">1</div>
+        <div class="fifth-two">2</div>
+        <div class="fifth-three">3</div>
+        <div class="fifth-four">4</div>
+        <div class="fifth-five">5</div>
+        <div class="fifth-six">6</div>
+        <div class="fifth-seven">7</div>
+        <div class="fifth-eight">8</div>
+        <div class="sixth-one">1</div>
+        <div class="sixth-two">2</div>
+        <div class="sixth-three">3</div>
+        <div class="sixth-four">4</div>
+        <div class="sixth-five">5</div>
+        <div class="sixth-six">6</div>
+        <div class="sixth-seven">7</div>
+        <div class="sixth-eight">8</div>
+        <div class="seventh-one">1</div>
+        <div class="seventh-two">2</div>
+        <div class="seventh-three">3</div>
+        <div class="seventh-four">4</div>
+        <div class="seventh-five">5</div>
+        <div class="seventh-six">6</div>
+        <div class="seventh-seven">7</div>
+        <div class="seventh-eight">8</div>
+        <div class="eighth-one">1</div>
+        <div class="eighth-two">2</div>
+        <div class="eighth-three">3</div>
+        <div class="eighth-four">4</div>
+        <div class="eighth-five">5</div>
+        <div class="eighth-six">6</div>
+        <div class="eighth-seven">7</div>
+        <div class="eighth-eight">8</div>
+
+
+    </div>
+
+</body>
+</html>
