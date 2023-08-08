@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addeventlistner</title>
+    <style>
+        #mybtn {
+            color: azure;
+            background-color: blue;
+            font-size: large;
+            padding: 5px;
+            margin: 2px;
+            border: 5px;
+        }
+        #mybtn1 {
+            color: azure;
+            background-color: blue;
+            font-size: large;
+            padding: 5px;
+            margin: 2px;
+            border: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>using addeventlistner</h1>
+    <button id = "mybtn" class = "custom-btn" onclick = display()>clickme</button>
+    <button id = "mybtn1" class = "custom-btn1">click me</button>
+
+    <button id = "demo" class = "custom-btn2">click</button>
+
+
+
+
+    <script>
+
+        function display(){
+            alert("buttton clicked from html tag event");
+
+        }
+
+        document.getElementById("mybtn1").addEventListener("click", () =>
+        {
+            const txt = document.createElement("p");
+            txt.innerText = "button clicked";
+            document.body.appendChild(txt);
+        });
+
+        function event(){
+            document.getElementById("demo").addEventListener("mouseover", () => 
+            {
+                const parag = document.createElement("p");
+                parag.innerText = "mouseover";
+                document.body.appendChild(parag);
+
+                
+            });
+        }
+
+        event();
+
+
+
+    </script>
+
+</body>
+</html>
